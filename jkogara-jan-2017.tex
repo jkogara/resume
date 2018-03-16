@@ -14,8 +14,8 @@
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 % adjust the page margins
 \usepackage[scale=0.95]{geometry}
@@ -25,15 +25,12 @@
 % personal data
 \name{John}{O'Gara}
 \title{Technical Leader}                               % optional, remove / comment the line if not wanted
-\address{43 Hillcrest Drive}{Gorey, Co.Wexford}{Ireland}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+351~933~930~428}
-\phone[mobile]{+353~86~055~3628}
+\address{Rua José Estêvão 4, 5e.}{1150-202, Lisboa}{Portugal}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+351~933~930~428}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
 \email{me@johnogara.com}                               % optional, remove / comment the line if not wanted
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-%\social[linkedin]{john-ogara}                        % optional, remove / comment the line if not wanted
+\social[linkedin]{john-ogara}                        % optional, remove / comment the line if not wanted
 %\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{jkogara}                              % optional, remove / comment the line if not wanted
@@ -65,25 +62,26 @@
 
 \section{Experience}
 
-\cventry{Jan 2017-- ..}{Director of Software Engineering}{Grubhub}{Remote}{}{Director for engineering for the international distributed teams at the largest online and mobile food ordering company in the United States.  
+\cventry{Jan 2017 -- Mar 2018}{Director of Software Engineering}{Grubhub}{Remote}{}{Director for engineering for the international distributed teams at the largest online and mobile food ordering company in the United States.
 \begin{itemize}%
 \item Hiring manager for international recruitment of distributed teams responsible for budget of over \$2m/annum.
 \item Worked closely with VP of Engineering and other Directors in the logistics and delivery function of the organisation's software engineering department to ensure timely delivery of critical services and applications crucial to scaling and reliability.
 \item Planned and managed delivery of projects crucial to operations including search and data pipeline projects.
 \item Managed multiple teams delivering services and applications in a microservices environment.
+\item Directly lead and contributed to software development teams on an as needed basis.
 \item Evangelised remote work best practises and methods for improving inter-team and department communication.
 \end{itemize}}
 
 
-\cventry{2016--2017}{Head of Platform}{Zoomer Delivery}{Remote}{}{Managed the engineering verticals in two product core product teams. Responsible for strategic planning and ensuring tactical execution of business driven requirements. 
+\cventry{2016--2017}{Head of Platform}{Zoomer Delivery}{Remote}{}{Managed the engineering verticals in two product core product teams. Responsible for strategic planning and ensuring tactical execution of business driven requirements.
 \begin{itemize}%
 \item Grew the remote team from a single team of 4 members to two teams of 5.
 \item Working closely with a PM, managed the planning and delivery of core product and engineering projects: Billing, Driver Payments, Driver Delivery Mobile App, Restaurant Mobile App, Driver Rationalisation and optimisation of build and deployment scripts, build time dropped from over twenty minutes to less than five.
  and Management tools.
-\item Planned and managed migration of services out of a monolithic application on an as needed basis.   
+\item Planned and managed migration of services out of a monolithic application on an as needed basis.
 \item Implemented continuous delivery practises across multiple teams.
-\item Worked effectively with Data Science and Logistics Technologies teams to implement event based information exchange between services. 
-\item Core contributor to multiple software projects across the organisation. 
+\item Worked effectively with Data Science and Logistics Technologies teams to implement event based information exchange between services.
+\item Core contributor to multiple software projects across the organisation.
 \end{itemize}}
 
 \cventry{2015--2016}{Lead Software Engineer}{Zoomer Delivery}{Remote}{}{Lead Engineering team in the development of multiple platform and product projects in a high growth start-up environment.\newline{}Played lead role in restructuring and rebuilding initial MVP into a production ready, resilient, and scalable platform.}
@@ -113,14 +111,19 @@
 
 \section{Software Development Skills}
 \cvitem{Languages}{Ruby, javascript, C/C++, java, python, perl, CSS, SASS, Elixir}
-\cvitem{Frameworks}{Rails, Phoenix, DropWizard, Spring, Angular, Ember, React}
-\cvitem{Datastores}{MySQL, postgres, redis, memcached, elasticsearch, mongodb, cassandra}
-\cvitem{Devops}{capistrano, puppet, foreman, monit, munin, SNMP, ansible, chef, boxen, jenkins, terraform}
+\cvitem{Frameworks}{Rails, Phoenix, DropWizard, Spring, Angular, Ember, React, VueJS}
+\cvitem{Datastores}{MySQL, statsd + graphite, Datadog postgres, redis, memcached, elasticsearch, mongodb, cassandra}
+\cvitem{Devops}{capistrano, puppet, foreman, monit, munin, SNMP, ansible, chef, boxen, jenkins, terraform, AWS, GCP,
+statsd + graphite, Datadog}
 \cvitem{Microservices}{Eureka Hystrix}
 
-\section{Education}
+\cleardoublepage
+\section{Education and Certifications}
 \cventry{1998--2003}{BSc. Computer Systems.}{University of Limerick}{Limerick, Ireland}{}{}  % arguments 3 to 6 can be left empty
-\cventry{2014--2016}{MSc. Advanced Software Engineering.}{University College Dublin}{Dublin, Ireland}{}{}
+\cventry{2008}{Redhat Certified Engineer}{Dublin - Ireland}{}{}{}
+\cventry{2014}{Elasticsearch Developer I}{Elasticsearch - Amsterdam}{}{}{}
+\cventry{2014}{MongoDB Developer}{MongoDB - Dublin}{}{}{}
+\cventry{2014--2017}{MSc. Advanced Software Engineering. - First Class Honours}{University College Dublin}{Dublin, Ireland}{}{}
 
 %\section{Languages}
 %\cvitemwithcomment{English}{Native Speaker}{}
@@ -144,16 +147,21 @@
 
 \section{References}
 \begin{cvcolumns}
+  \cvcolumn{Grubhub}{
+  \begin{itemize}
+    \item Saad Rehmani - VP of Eng.
+    \item Johnny Lamb - Director of Eng.
+  \end{itemize}}
   \cvcolumn{Zoomer Delivery}{
   \begin{itemize}
   	\item Robert Shedd - CTO
-  	\item Alastair Haigh - Head of Product Design
+  	\item Alastair Haigh - Head of Product
   \end{itemize}}
   \cvcolumn{Intercom}{
   \begin{itemize}
   \item Ciaran Lee - CTO
-  \item Rich Archbold - Director of Engineering
-  \item Cormac Maguire - Engineering Manager
+  \item Rich Archbold - Director of Eng.
+  \item Cormac Maguire - Eng.Manager
   \end{itemize}}
 \end{cvcolumns}
 
